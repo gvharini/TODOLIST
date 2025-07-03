@@ -5,7 +5,7 @@ const TodoSchema = new mongoose.Schema({
     done: {
         type: Boolean,
         default: false
-    }
+    } 
 })
 
 const TodoModel = mongoose.model('todos',TodoSchema)

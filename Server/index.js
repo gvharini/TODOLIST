@@ -8,7 +8,7 @@ const app = express();
 app.use(cors("*"));
 app.use(express.json());
 
-mongoose.connect('mongodb://0.0.0.0:27017/test');
+mongoose.connect('mongodb+srv://harini:120507@cluster0.ltmw4g9.mongodb.net/todo');
 
 app.get('/get', (req, res) => {
     TodoModel.find()
@@ -16,17 +16,18 @@ app.get('/get', (req, res) => {
     .catch(err => res.json(err))
 })
 
+
 app.put('/update/:id', (req, res) =>{
     const {id} = req.params;
     TodoModel.findByIdAndUpdate({_id: id}, {done: true})
-    .then(restul => res.json(result))
+    .then(result => res.json(result))
     .catch(err => res.json(err))
 })
 
 app.put('/delete/:id', (req, res) => {
     const {id} = req.params;
     TodoModel.findByIdAndDelete({_id: id})
-    .then(restul => res.json(result))
+    .then(result => res.json(result))
     .catch(err => res.json(err))
 })
 
