@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import "./App.css";
+<<<<<<< HEAD
 import './Create.css'
+=======
+>>>>>>> 96d1f7622ae7d58a0618373b431421d459c3651f
 function Create() {
     const [task, setTask] = useState()
     const handleAdd = () => {
