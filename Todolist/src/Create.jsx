@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import "./App.css";
+
+import './Create.css'
+
 function Create() {
     const [task, setTask] = useState()
     const handleAdd = () => {
@@ -18,4 +21,4 @@ function Create() {
   )
 }
 
-export default Create
+export default Create;
